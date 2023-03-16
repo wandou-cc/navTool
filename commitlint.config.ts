@@ -6,6 +6,7 @@
     refactor：重构（即不是新增功能，也不是修改bug的代码变动）
     test：增加测试
     chore：构建过程或辅助工具的变动
+    参考文档：https://commitlint.js.org/#/reference-rules?id=rules
 */
 module.exports = {
     extends: ['@commitlint/config-conventional'],

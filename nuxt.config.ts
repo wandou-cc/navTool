@@ -1,11 +1,12 @@
+
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
     // https://vite.nuxtjs.org/misc/common-issues/#styleresources
-
     css: [
-    // "@/assets/less/global.less",
-    // "@/assets/less/_global.scss"
+        '@/assets/less/index.less'
     ],
     build: {
         transpile:
@@ -18,7 +19,15 @@ export default defineNuxtConfig({
           ]
           : ['@juggle/resize-observer']
     },
+    app: {
+        pageTransition: { name: 'fade', mode: 'in-out' }
+    },
     vite: {
+        plugins: [
+            Components({
+                resolvers: [NaiveUiResolver()]
+            })
+        ],
         optimizeDeps: {
             include:
         process.env.NODE_ENV === 'development'
@@ -28,7 +37,7 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 less: {
-                    additionalData: '@import "@/assets/less/global.less";'
+                    additionalData: '@import "@/assets/less/var.less";'
                 }
             }
         }

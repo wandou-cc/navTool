@@ -14,8 +14,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --cache",
-    "eslint:fix": "npm run eslint -- --fix",
-    "prepare": "husky install"
+    "eslint:fix": "npm run eslint -- --fix"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^12.0.0",

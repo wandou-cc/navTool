@@ -1,5 +1,12 @@
 {
-  "private": true,
+  "name": "navTool-cc", 
+  "version": "1.0.0",
+  "author": "cc",
+  "description": "common toolkit",
+  "keywords": ["utils", "format", "money", "phone"], 
+  "license": "ISC", 
+  "main": "index.js",
+  "private": false,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
